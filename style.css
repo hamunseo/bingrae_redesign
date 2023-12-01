@@ -1,0 +1,265 @@
+
+@font-face {
+  font-family: Binggrae;
+  src: url('Binggrae.otf');
+}
+@font-face {
+  font-family: Binggrae-Bold;
+  src: url('Binggrae-Bold.otf');
+}
+body {
+  font-family: Binggrae, sans-serif;
+}
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+.page1{
+  background-image: url(background_img.png);
+  height: 100vh;
+  width: 100%;
+}
+
+.navbar {
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 60px;
+}
+.navbar_menu {
+    display: flex;
+    list-style: none;
+}
+.navbar_menu li {
+  padding-left: 72px;
+}
+.navbar_menu a {
+  text-decoration:none ;
+  font-size: 18px;
+  color: #1F1F1F;
+  font-weight: 900;
+}
+.navbar_menu li:last-child {
+  padding-right: 0;
+}
+.select {
+  background-color: #F8E2E3;
+  border: none;
+  padding: 8px 16px;
+  font-family: Binggrae-Bold;
+  font-size: 18px;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url(dropdown_arrow.png) no-repeat right center;
+  background-size: 10px 5px;
+  cursor: pointer;
+  padding-right: 25px;
+}
+
+.select:focus {
+  outline: none;
+}
+.main_img{
+  width: 100%;
+}
+.main_img img{
+  display: block;
+  height: 32vh;
+  margin-top: 146px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: shake 5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  10% {
+    transform: translate3d(0, -8px, 0);
+  }
+  20% {
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -8px, 0);
+  }
+  40% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+  60% {
+    transform: translate3d(0, 0, 0);
+  }
+  70% {
+    transform: translate3d(0, -8px, 0);
+  }
+  80% {
+    transform: translate3d(0, 0, 0);
+  }
+  90% {
+    transform: translate3d(0, -8px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.category{
+  width: 1000px;
+  margin-top: 88px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center
+}
+.category h2{
+  font-family: Binggrae-Bold, sans-serif;
+  font-size: 30px;
+  color: #1F1F1F;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 80px;
+  margin-top: 48px;
+}
+.items h3{
+  font-weight: 300;
+  color: #1F1F1F;
+  font-size: 16px;
+  opacity:0;
+}
+/* 햄버거바 영역 */
+.burger {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  background: transparent;
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 24px;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 60%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  /* left: 0; */
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  transform-origin: left center;
+  transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  transform: rotate(45deg);
+  top: 0px;
+  left: 0px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  transform: rotate(-45deg);
+  top: 15px;
+  left: 3px;
+}
+/* page2 스타일링 */
+  /* .page2 {
+    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+  } */
+  .page2{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+  }
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  .product-item {
+    /* background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); */
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .page2 h2{
+    text-align: center;
+  }
+  
+  .product-item img {
+    max-width: 100%;
+  }
+  
+  .product-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  
+  .product-item p {
+    font-size: 16px;
+    color: #666;
+    margin: 10px 0 20px;
+  }
+  
+  .product-item button {
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-item button:hover {
+    background-color: #000;
+  }
